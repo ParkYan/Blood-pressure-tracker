@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Pressure Tracker</title>
+    <link rel="stylesheet" href="blood_pressure.css">
+</head>
+
+<body>
+    <h1>Blood Pressure Tracker</h1>
+
+    <form id="bpForm">
+        <fieldset>
+            <legend>Enter New Reading</legend><br>
+
+            <label for="date">Date:</label><br>
+            <input type="date" id="date" class="readings">
+            <div id="date-msg" class="error-text"></div>
+            <br><br>
+
+            <label for="systolic">Systolic:</label><br>
+            <input type="number" id="systolic" class="readings">
+            <div id="systolic-msg" class="error-text"></div>
+            <br><br>
+
+            <label for="diastolic">Diastolic:</label><br>
+            <input type="number" id="diastolic" class="readings">
+            <div id="diastolic-msg" class="error-text"></div>
+            <br><br>
+
+            <button id="submit">Add Reading</button><br><br>
+        </fieldset>
+    </form>
+    <br>
+    <!--Current Status Display showing a result -->
+    <div id="status-display" class="status-box">
+        Enter your readings to see your status
+    </div><br>
+
+    <!--Status bar (the bars show normal, elevated and high blood pressure)-->
+    <h2>Current Reading Level:</h2>
+   <div class="status-bar-container">
+    <div class="color-zones">
+        <span class="normalGreen"></span>
+        <span class="elevatedYellow"></span>
+        <span class="highOrange"></span>
+        <span class="hyperRed"></span>
+        <span class="crisisRed"></span>
+    </div>
+    <div id="status-fill" class="status-fill"></div>
+</div> <br>
+
+    <!--History Log Section-->
+
+    <div class="history-section">
+        <h2>Recent Readings</h2>
+        <table id="history-log-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Systolic</th>
+                    <th>Diastolic</th>
+                    <th>Category</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="history-log-body">
+            </tbody>
+        </table>
+    </div>
+    <script src="blood_pressure.js"></script>
+</body>
+<footer>Copyright &copy; 2026</footer>
+
+</html>
